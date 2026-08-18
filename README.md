@@ -36,7 +36,7 @@ of testing is designed to distinguish.
 ## Installation
 
 ```bash
-git clone https://github.com/<user>/Homemade-BCI-Decoder.git
+git clone https://github.com/seanbug/Homemade-BCI-Decoder.git
 cd Homemade-BCI-Decoder
 uv sync
 ```
