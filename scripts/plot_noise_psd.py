@@ -1,7 +1,10 @@
 import numpy as np
 from scipy.signal import welch
 import matplotlib.pyplot as plt
+from pathlib import Path
 
+FIG_DIR = Path(__file__).resolve().parent.parent / "docs" / "figures"
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 data = np.load('data/mi_dataset_S01_20251121_194235.npz')
 print(data.files)
 for key in data.files:
@@ -64,4 +67,6 @@ axes[1].set_xlabel('Frequency (Hz)')
 axes[1].set_ylabel('Power Spectral Density (a.u./Hz)')
 axes[1].axvspan(8, 30, alpha=0.15, color='gray')
 axes[1].legend()
-plt.show()
+fig.tight_layout()
+fig.savefig(FIG_DIR / "psd_overview.png", dpi=150, bbox_inches="tight")
+print(f"Saved to {FIG_DIR / 'psd_overview.png'}")
