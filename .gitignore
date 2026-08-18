@@ -3,6 +3,9 @@ psychopy_env/
 venv/
 .venv/
 env/
+data/
+results/
+
 
 # Python
 __pycache__/
