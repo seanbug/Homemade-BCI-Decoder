@@ -1,11 +1,12 @@
-import numpy as np
 import glob
+
+import numpy as np
+from joblib import dump
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import StratifiedKFold
-from joblib import dump
 
-from features import extract_features
+from homemade_bci_decoder.features import extract_features
 
 dataPartitions = 5
 outputtedModel = "mi_clf.joblib"

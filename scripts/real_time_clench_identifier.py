@@ -1,11 +1,12 @@
+import time
+from pathlib import Path
+
+import keyboard
 import numpy as np
 import sounddevice as sd
 from joblib import load
-from pathlib import Path
-import time
-import keyboard
 
-from features import extract_features
+from homemade_bci_decoder.features import extract_features
 
 model_path = Path(__file__).resolve().parent / "mi_clf.joblib"
 clf = load(model_path)
